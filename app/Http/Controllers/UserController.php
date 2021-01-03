@@ -94,8 +94,10 @@ class UserController extends Controller
     { 
         try{
             // if(Auth::user()){
+
                 $data['products'] = Products::where('product_status','1')->get(); 
                 return response()->json(['success'=>$data], $this-> successStatus); 
+                
             /*}else{
                 return 'Invalid User';
             }*/
